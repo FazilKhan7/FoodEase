@@ -102,7 +102,6 @@ final class CardView: UIView {
         return button
     }()
     
-    
     @objc private func handleSelectedTegs() {
         let managedObject = DishEntity()
         if let selectedTag = selectedTag {
@@ -111,6 +110,9 @@ final class CardView: UIView {
             managedObject.imageUrl = selectedTag.image_url
             managedObject.quantity = 1
             CoreDataManager.shared.saveContext()
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) { [self] in
+            isHidden = true
         }
     }
     
