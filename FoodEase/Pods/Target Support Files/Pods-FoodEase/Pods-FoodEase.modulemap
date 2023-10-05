@@ -1,0 +1,6 @@
+framework module Pods_FoodEase {
+  umbrella header "Pods-FoodEase-umbrella.h"
+
+  export *
+  module * { export * }
+}
