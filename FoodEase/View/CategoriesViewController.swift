@@ -112,7 +112,7 @@ final class CategoriesViewController: UIViewController {
             make.top.equalTo(horizontalCollectionView.snp.bottom).offset(30)
             make.leading.equalTo(view.safeAreaLayoutGuide).offset(10)
             make.trailing.equalTo(view.safeAreaLayoutGuide).offset(-10)
-            make.bottom.equalTo(view.safeAreaLayoutGuide).offset(-20)
+            make.bottom.equalToSuperview()
         }
     }
 }
